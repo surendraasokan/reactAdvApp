@@ -10,6 +10,7 @@ import PostsIndex from './components/posts_index';
 import promise from 'redux-promise';
 import PostNew from './components/posts_new';
 import PostShow from './components/posts_show';
+import WeatherApp from './components/weather_app';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -21,7 +22,8 @@ ReactDOM.render(
       <div>
         <Switch>
           <Route path="/posts/new" component={PostNew} />
-          <Route path="/posts/:postId" component={PostShow} />
+          <Route path="/weather" component={WeatherApp} />
+          <Route path="/posts/:postId" component={PostShow} />          
           <Route path="/" component={PostsIndex} />
         </Switch>
       </div>

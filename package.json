@@ -1,13 +1,11 @@
 {
   "name": "react-adv-app",
   "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
+  "description": "A react application with weather details",
   "main": "index.js",
   "repository": "git@github.com:surendraasokan/reactAdvApp.git",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
   "author": "",
   "license": "ISC",
@@ -34,6 +32,7 @@
     "react-redux": "4.3.0",
     "react-router": "^2.0.1",
     "react-router-dom": "^4.0.0",
+    "react-sparklines": "^1.6.0",
     "redux": "^3.0.4",
     "redux-form": "^6.6.3",
     "redux-promise": "^0.5.3"

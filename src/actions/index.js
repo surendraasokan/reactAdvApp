@@ -3,9 +3,24 @@ export const FETCH_POSTS = "fetchPosts";
 export const CREATE_POST = "createPost";
 export const FETCH_POST = "fetchPost";
 export const DELETE_POST = "deletePost";
+export const FETCH_WEATHER = 'FETCH_WEATHER';
 
 const ROOT_URL = "http://reduxblog.herokuapp.com/api";
 const API_KEY = '?key=sarbein123';
+
+const WEATHER_API_KEY = "7746e5b5833095ff488469f7d131e015";
+const WEATHER_ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${WEATHER_API_KEY}`;
+
+
+export function fetchWeather(city) {
+    const url = `${WEATHER_ROOT_URL}&q=${city},us`;
+    const request = axios.get(url);
+
+    return {
+        type: FETCH_WEATHER,
+        payload: request
+    };
+}
 
 export function fetchPosts() {
 
