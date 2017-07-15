@@ -9,13 +9,13 @@ export default function(state = {}, action) {
       return _.omit(state, action.payload);//now action.payload has deleted id.
       //_.omit() omits the deleted id and returns state
     case FETCH_POST :
-      //ES5 code
+      //Normal code
       // const post = action.payload.data;
       // const newState = { ...state }; //remove all the contents in the state and return new state
       // newState[post.id] = post;
       // return newState;
 
-      return { ...state, [ action.payload.data.id ]: action.payload.data }; //ES6 code
+      return { ...state, [ action.payload.data.id ]: action.payload.data }; //New ES6 code
 
     default:
       return state;

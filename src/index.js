@@ -6,10 +6,10 @@ import { createStore, applyMiddleware } from 'redux';
 
 import reducers from './reducers';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import PostsIndex from './components/posts_index';
+import PostsIndex from './containers/posts_index';
 import promise from 'redux-promise';
-import PostNew from './components/posts_new';
-import PostShow from './components/posts_show';
+import PostNew from './containers/posts_new';
+import PostShow from './containers/posts_show';
 import WeatherApp from './components/weather_app';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
@@ -23,7 +23,7 @@ ReactDOM.render(
         <Switch>
           <Route path="/posts/new" component={PostNew} />
           <Route path="/weather" component={WeatherApp} />
-          <Route path="/posts/:postId" component={PostShow} />          
+          <Route path="/posts/:postId" component={PostShow} />
           <Route path="/" component={PostsIndex} />
         </Switch>
       </div>
