@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "lint": "./node_modules/.bin/eslint .",
-    "test": "jest"
+    "test": "jest",
+    "cover": "jest --coverage"
   },
   "author": "",
   "license": "ISC",
@@ -35,8 +36,8 @@
     "enzyme": "^2.9.1",
     "eslint": "^4.2.0",
     "lodash": "^3.10.1",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "react-redux": "4.3.0",
     "react-router": "^2.0.1",
     "react-router-dom": "^4.0.0",
@@ -45,5 +46,10 @@
     "redux-form": "^6.6.3",
     "redux-mock-store": "^1.2.3",
     "redux-promise": "^0.5.3"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
   }
 }
